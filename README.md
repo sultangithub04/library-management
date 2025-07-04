@@ -115,8 +115,6 @@ POST /api/borrow
 ## For Fontend
 
 
-# 📚  Library Management System - Frontend
-
 This is the **Frontend Client** for the ** Library Management System**, built with **React**, **TypeScript**, **Redux Toolkit**, **RTK Query**, and **Tailwind CSS**.
 
 ---
