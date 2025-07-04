@@ -114,8 +114,8 @@ POST /api/borrow
 
 ## For Fontend
 
-```markdown
-# 📚 Minimal Library Management System - Frontend
+
+# 📚  Library Management System - Frontend
 
 This is the **Frontend Client** for the ** Library Management System**, built with **React**, **TypeScript**, **Redux Toolkit**, **RTK Query**, and **Tailwind CSS**.
 
@@ -144,12 +144,7 @@ This is the **Frontend Client** for the ** Library Management System**, built wi
   - Displays an aggregated summary of all borrowed books.
   - Shows Book Title, ISBN, Total Quantity Borrowed.
 
-- 🌙 **Minimal UI**
-  - Clean, responsive design using Tailwind CSS.
-  - Toast notifications for success and error.
-  - Optimistic UI updates for smooth UX.
 
----
 
 ## 🗂️ Tech Stack
 
