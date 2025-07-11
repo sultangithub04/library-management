@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useNavigate } from 'react-router';
+import { toast } from 'sonner';
 
 type Genre = 'FICTION' | 'NON_FICTION' | 'SCIENCE' | 'HISTORY' | 'BIOGRAPHY' | 'FANTASY';
 
@@ -42,6 +43,7 @@ const AddBookModal: React.FC = () => {
     };
     await addBook(payload);
     setOpen(false)
+    toast("Book added successfully");
     reset()
     navigate("/")
   };
@@ -50,9 +52,9 @@ const AddBookModal: React.FC = () => {
     <div>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline" className="border-none font-normal">
+          <div className="border-none">
             Add Book
-          </Button>
+          </div>
         </DialogTrigger>
         <DialogContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -93,9 +95,8 @@ const AddBookModal: React.FC = () => {
 
               <div className="grid gap-2">
                 <Label htmlFor="isbn">ISBN</Label>
-                <Input id="isbn" {...register('isbn', { required: true })} placeholder="ISBN" />
+                <Input id="isbn"  {...register('isbn', { required: true })} placeholder="ISBN" />
               </div>
-
               <div className="grid gap-2">
                 <Label htmlFor="description">Description</Label>
                 <Textarea id="description" {...register('description')} placeholder="Description" />

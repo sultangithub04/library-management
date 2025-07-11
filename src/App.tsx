@@ -2,6 +2,7 @@
 import { Outlet } from "react-router"
 import Footer from "./home/Footer"
 import NavBar from "./home/NavBar"
+import Header from "./home/Header"
 
 
 
@@ -9,8 +10,9 @@ import NavBar from "./home/NavBar"
 
 function App() {
   return (
-    <div className="max-w-6xl mx-auto" >
+    <div className="max-w-6xl mx-auto min-h-screen" >
       <NavBar></NavBar><br />
+      <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

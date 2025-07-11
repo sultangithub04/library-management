@@ -148,9 +148,12 @@ const Home = () => {
 
       {/* EDIT MODAL */}
       {editBook && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 bg-opacity-50">
           <div className="bg-white p-4 rounded w-full max-w-md mx-auto">
             <h2 className="text-xl font-bold mb-4">Edit Book</h2>
+            <label className="block mb-2 text-sm font-bold">
+              Title
+            </label>
             <input
               className="w-full border p-2 mb-2"
               name="title"
@@ -158,6 +161,9 @@ const Home = () => {
               onChange={handleFormChange}
               placeholder="Title"
             />
+              <label className="block mb-2 text-sm font-bold">
+              Author
+            </label>
             <input
               className="w-full border p-2 mb-2"
               name="author"
@@ -165,6 +171,9 @@ const Home = () => {
               onChange={handleFormChange}
               placeholder="Author"
             />
+              <label className="block mb-2 text-sm font-bold">
+              Genre
+            </label>
             <input
               className="w-full border p-2 mb-2"
               name="genre"
@@ -172,6 +181,9 @@ const Home = () => {
               onChange={handleFormChange}
               placeholder="Genre"
             />
+              <label className="block mb-2 text-sm font-bold">
+              ISBN
+            </label>
             <input
               className="w-full border p-2 mb-2"
               name="isbn"
@@ -179,8 +191,11 @@ const Home = () => {
               onChange={handleFormChange}
               placeholder="ISBN"
             />
+              <label className="block mb-2 text-sm font-bold">
+              Copies
+            </label>
             <input
-              className="w-full border p-2 mb-4"
+              className="w-full border p-2 mb-4 "
               type="number"
               name="copies"
               value={formData.copies || ""}
@@ -207,7 +222,7 @@ const Home = () => {
 
       {/* BORROW MODAL */}
       {borrowBook && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 bg-opacity-50">
           <div className="bg-white p-4 rounded w-full max-w-md mx-auto">
             <h2 className="text-xl font-bold mb-4">
               Borrow: {borrowBook.title}
@@ -251,7 +266,7 @@ const Home = () => {
 
       {/* DELETE CONFIRMATION MODAL */}
       {confirmDeleteBookId && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 bg-opacity-50">
           <div className="bg-white p-4 rounded w-full max-w-md mx-auto">
             <h2 className="text-xl font-bold mb-4">Confirm Delete</h2>
             <p>Are you sure you want to delete this book?</p>

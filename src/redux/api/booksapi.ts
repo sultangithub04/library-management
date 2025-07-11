@@ -1,20 +1,10 @@
 import type { BorrowSummaryItem } from "@/home/BorrowSummary";
 import type { Book } from "@/home/Home";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-// export interface Book {
-//   _id: string;
-//   title: string;
-//   author: string;
-//   genre: string;
-//   isbn: string;
-//   copies: number;
-
-// }
-
 export const bookApi = createApi({
   reducerPath: "bookApi",
   baseQuery: fetchBaseQuery({
+    // baseUrl: "http://localhost:5000"
     baseUrl: "https://librarymanagement-lac.vercel.app"
   }),
   tagTypes: ["book"],

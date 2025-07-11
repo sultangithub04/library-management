@@ -1,44 +1,47 @@
 
-import { NavLink } from "react-router";
-import AddBookModal from "./AddBookModal";
+
+import { FaSearch } from "react-icons/fa";
 
 
 const NavBar = () => {
 
-    const links = <>
-        <li><NavLink to="/">All Books</NavLink></li>
-        <AddBookModal></AddBookModal>
-        <li><NavLink to="/borrowsummary">Borrow Summary</NavLink></li>
-    </>
+
 
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm ">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {links}
-
-                        </ul>
+           
+            <div>
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-4">
+                    {/* Logo */}
+                    <div className="flex items-center mb-4 md:mb-0">
+                        <span className="text-orange-600 font-bold text-xl">GetBooks</span>
                     </div>
-                    <a className="btn btn-ghost text-xl">Library Management</a>
-                </div>
-                <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
 
-                        {links}
-                    </ul>
+                    {/* Search Bar */}
+                    <div className="flex flex-1 max-w-xl mb-4 md:mb-0">
+                        <input
+                            type="text"
+                            placeholder="Search entire store here..."
+                            className="flex-grow px-4 py-2 border border-gray-300 rounded-l bg-gray-100 text-sm focus:outline-none"
+                        />
+                        <button className="bg-orange-600 text-white px-4 rounded-r">
+                            <FaSearch />
+                        </button>
+                    </div>
+
+                    {/* Auth Buttons */}
+                    <div className="flex space-x-2">
+                        <button className="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 text-sm">
+                            Login
+                        </button>
+                        <button className="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 text-sm">
+                            Signup
+                        </button>
+                    </div>
                 </div>
-                {/* <div className="navbar-end">
-                    <a className="btn">Button</a>
-                </div> */}
             </div>
         </div>
+
     );
 };
 
