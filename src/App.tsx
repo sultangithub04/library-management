@@ -10,7 +10,7 @@ import Header from "./home/Header"
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100" >
+    <div className="flex flex-col min-h-screen" >
       <NavBar></NavBar><br />
       <Header></Header>
       <div className="flex-grow container mx-auto p-4">
