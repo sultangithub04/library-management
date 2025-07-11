@@ -93,8 +93,8 @@ const Home = () => {
 
   return (
     <div className="p-4">
-      <div className="w-full overflow-x-auto">
-        <table className="min-w-full text-sm border border-gray-300">
+      <div className="">
+        <table className="min-w-6xl mx-auto text-sm border border-gray-300">
           <thead className="bg-gray-100">
             <tr>
               <th className="border p-2 text-left">Title</th>

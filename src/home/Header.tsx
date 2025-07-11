@@ -15,7 +15,7 @@ export default function Header() {
 
 
             {/* Nav Menu */}
-            <nav className="bg-black">
+            <nav className="bg-gray-900">
                 <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 text-white">
                     <ul className="hidden md:flex space-x-6 font-bold text-sm text-white">
                         <li><a href="#" className="hover:underline"><NavLink to="/">All Books</NavLink></a></li>

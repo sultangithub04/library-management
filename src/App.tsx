@@ -10,10 +10,12 @@ import Header from "./home/Header"
 
 function App() {
   return (
-    <div className="max-w-6xl mx-auto min-h-screen" >
+    <div className="flex flex-col min-h-screen bg-gray-100" >
       <NavBar></NavBar><br />
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="flex-grow container mx-auto p-4">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   )
